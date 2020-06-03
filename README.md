@@ -10,8 +10,7 @@
   Webpages are available in ./ShoppingCart.WebPages folder
   API project is available in ./ShoppingCart.WebAPI
   
-  To pre populate data in database use ./ShoppingCart.WebAPI/ShoppingCartDBScript to run the scripts.
-  
+    
  ### Steps to run the application:
 
 1. Install all dependencies for application using "npm install" in current project folder using command prompt. This would set up the application be start.
