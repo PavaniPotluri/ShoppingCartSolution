@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAg8AIHLDKRka3CvufEqLj2QAAAAACAAAAAAADZgAAwAAAABAAAAAuKku8iENnuhszoQhxNFGmAAAAAASAAACgAAAAEAAAALaABWc2sIu2GF5vIFKpTcKAAAAAOLCK2B/2f3GRPNLR0wA3R9Onafmo+cZnXelKvCKQ7+KAqhIre/Epk7q65MgA6bU+DJH+xTxE/Awtzyxo5sY8jzMHm80MGpjegkWCCJ87lgcVfe2F0UWwr5uM2C3HRm1HKYZ4aMzT3Z6vncv1ut2NWTP6UK9ykijvPBahnksT/XYUAAAATbjpSHT/CAiFt+6OLv4PtLkLULk=</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="ShoppingCartDB">
+      <Value>Password=S%40mple1%24%3bPersist Security Info=True%3bUser ID=pavani%3bInitial Catalog=ShoppingCartDB%3bData Source=reactdemo.database.windows.net</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>
