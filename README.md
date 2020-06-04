@@ -15,5 +15,9 @@
 
 1. Install all dependencies for application using "npm install" in current project folder using command prompt. This would set up the application be start.
 2. As this project contains both APIs and UI, Please set the Start up project to Multiple Startup Projects under properties section.
-  
+
+
+### Shopping Cart website link
+
+     https://eshopcart.azurewebsites.net/
 
