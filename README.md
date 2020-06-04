@@ -7,8 +7,8 @@
   SQL Server used for database implmentation.
   React js with Redux is used for UI development.
   
-  Webpages are available in ./ShoppingCart.WebPages folder
-  API project is available in ./ShoppingCart.WebAPI
+ Webpages are available in ./ShoppingCart.WebPages folder.
+ API project is available in ./ShoppingCart.WebAPI
   
     
  ### Steps to run the application:
