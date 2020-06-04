@@ -4,7 +4,8 @@ import { toast } from 'react-toastify';
 
 export const userActions = {
     login,
-    logout
+    logout,
+    register
 };
 function login(username, password) {
 
@@ -13,7 +14,7 @@ function login(username, password) {
         let payload = {
             username: username,
             password: password
-        }        
+        }
         commonService.addData(apiEndpoint, payload)
             .then((response) => {
                 if (response && response.data && response.data.token) {
@@ -21,20 +22,35 @@ function login(username, password) {
                     localStorage.setItem('auth', true);
                     localStorage.setItem('userName', response.data.firstName + " " + response.data.lastName);
                     localStorage.setItem('isAdmin', response.data.isAdmin);
+                    localStorage.setItem('cartCount', response.data.userCartValue);
                     dispatch(setUserDetails(response.data));
                     history.push('/dashboard');
                 }
                 else {
-                    //history.push('/login');
+                    toast.error(response.response.data.message);
+                }
+            })
+    };
+}
+function register(payload) {
+    debugger;
+    return dispatch => {
+        let apiEndpoint = 'api/Users/Register';
+        commonService.addData(apiEndpoint, payload)
+            .then((response) => {
+                if (response && response.data) {
+                    toast.success("User successfully registered.");
+                    dispatch(login(payload.email, payload.password));
+                }
+                else {
                     toast.error(response.response.data.message);
                 }
             })
     };
 }
 function logout() {
-    return dispatch => {       
+    return dispatch => {
         localStorage.clear();
-        //dispatch(logoutUser());
         history.push('/login');
     }
 }

@@ -9,10 +9,12 @@ const { isShow, setShow } = false;
 const drawerWidth = 240;
 
 class TopMenuBar extends React.Component {
+    debugger;
     state = {
         anchor: 'left',
         email: '',
-        isShow: false
+        isShow: false,
+        cartCount: localStorage.getItem('cartCount') ? localStorage.getItem('cartCount') : 0
     };
     handleChange = event => {
         this.setState({
@@ -30,21 +32,27 @@ class TopMenuBar extends React.Component {
         this.setState({ isShow: !this.state.isShow });
     }
 
-   
+    componentWillReceiveProps(nextProps) {
+        debugger;
+        if (this.props !== nextProps) {
+            this.setState({ CartCount: localStorage.getItem('cartCount') ? localStorage.getItem('cartCount') : 0 });
+        }
+    }
+
 
     render() {
-        const cartCount = localStorage.getItem('cartCount') ? localStorage.getItem('cartCount'):0;
+        debugger;
         const { classes } = this.props;
         const { anchor } = this.state;
         this.state.email = localStorage.getItem('auth') ? localStorage.getItem('userName') : "";
         return (
             <Fragment>
                 <nav className="navbar navbar-expand navbar-light bg-custom-bar topbar mb-4 static-top shadow">
-                    <ul className="navbar-nav ml-auto">  
+                    <ul className="navbar-nav ml-auto">
                         <li>
-                        <CartCount count={cartCount}></CartCount>
-                            
-                        </li>                   
+                            <CartCount count={this.state.cartCount}></CartCount>
+
+                        </li>
                         <li className="nav-item dropdown no-arrow">
                             <a className="nav-link dropdown-toggle"
                                 onClick={(event) => { this.setShow() }}
@@ -76,7 +84,7 @@ class TopMenuBar extends React.Component {
     }
 }
 const mapStateToProps = (state) => {
-    const { loggingIn,dashboard,userCart,itemData } = state.authentication;
+    const { loggingIn, dashboard, userCart, itemData } = state.authentication;
     return {
         loggingIn,
         dashboard,

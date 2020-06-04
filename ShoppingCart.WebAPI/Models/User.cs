@@ -15,5 +15,6 @@ namespace ShoppingCart.WebAPI.Models
         public string Email { get; set; }
         public bool IsAdmin { get; set; }
         public string Token { get; set; }
+        public int userCartValue { get; set; }
     }
 }

@@ -17,11 +17,12 @@ namespace ShoppingCart.WebAPI.Services
     public interface IUserService
     {
         User Authenticate(string username, string password);
+        int RegisterUser(User user);
     }
 
     public class UserService : IUserService
     {
-        private ShoppingCartDBContext dbContext;
+        private readonly ShoppingCartDBContext dbContext;
         private readonly AppSettings _appSettings;
         public UserService(ShoppingCartDBContext context, IOptions<AppSettings> appSettings)
         {
@@ -51,6 +52,7 @@ namespace ShoppingCart.WebAPI.Services
 
             var user = users.SingleOrDefault(x => x.Email == username && x.Password == password);
 
+
             // return null if user not found
             if (user == null)
                 return null;
@@ -70,8 +72,44 @@ namespace ShoppingCart.WebAPI.Services
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);
             user.Token = tokenHandler.WriteToken(token);
+            user.userCartValue = (from userCart in dbContext.ScUserCart
+                                  where userCart.UserId == user.Id
+                                  select userCart.UserCartId).Count();
 
             return user;
+        }
+
+        public int RegisterUser(User user)
+        {
+            try
+            {
+                var count = (from users in dbContext.NfUser
+                             where users.Email == user.Email
+                             select users).Count();
+                if (count == 0)
+                {
+                    NfUser newUser = new NfUser();
+                    newUser.FirstName = user.FirstName;
+                    newUser.LastName = user.LastName;
+                    newUser.Email = user.Email;
+                    newUser.Password = user.Password;
+                    newUser.IsActive = true;
+                    newUser.PasswordHash = "";
+                    newUser.SecurityStamp = "";
+
+                    dbContext.Add(newUser);
+                    dbContext.SaveChanges();
+
+                    user.Id = newUser.UserId;
+                    return 1;
+                }
+                else
+                    return -1;
+            }
+            catch(Exception ex)
+            {
+                return 0;
+            }
         }
 
 

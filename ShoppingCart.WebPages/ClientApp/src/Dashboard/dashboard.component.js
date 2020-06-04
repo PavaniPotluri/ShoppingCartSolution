@@ -36,6 +36,7 @@ class Dashboard extends Component {
             if(nextProps.dashboard && nextProps.dashboard.dashboardItems)
             {
                 this.setState(nextProps.dashboard.dashboardItems);
+                
             }
         }
     }
@@ -62,6 +63,7 @@ class Dashboard extends Component {
         const { dashboard } = this.props;
         return (
             <Fragment>
+               
                 <h1 className="h3 mb-2 text-gray-800">Dashboard</h1>
                 {dashboard && dashboard.loading && <p>Loading dashboard...</p>}
                 {dashboard && dashboard.error && <span className="text-danger">ERROR: {dashboard.error}</span>}

@@ -3,7 +3,7 @@
   <parameter name="IIS Web Application Name" description="" value="eshopcartapi" tags="IisApp">
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\ReactProject\\ShoppingCartSolution\\ShoppingCart\.WebAPI\\obj\\Release\\netcoreapp3\.1\\PubTmp\\Out\\$" />
   </parameter>
-  <parameter name="ShoppingCart.WebAPI.DataModels.ShoppingCartDBContext" description="" value="Server=tcp:reactdemo.database.windows.net,1433;Initial Catalog=ShoppingCartDB;Persist Security Info=False;User ID=pavani;Password=S@mple1$;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="dbfullsql">
+  <parameter name="ShoppingCart.WebAPI.DataModels.ShoppingCartDBContext" description="" value="Server=tcp:reactdemo.database.windows.net,1433;Initial Catalog=ShoppingCartDB;Persist Security Info=False;User ID=pavani;Password=S@mple1$;MultipleActiveResultSets=True;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="dbfullsql">
     <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^D:\\ReactProject\\ShoppingCartSolution\\ShoppingCart\.WebAPI\\obj\\Release\\netcoreapp3\.1\\PubTmp\\EFSQLScripts\\ShoppingCart\.WebAPI\.DataModels\.ShoppingCartDBContext\.sql$" />
   </parameter>
 </parameters>

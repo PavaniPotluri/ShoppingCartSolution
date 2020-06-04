@@ -25,7 +25,7 @@ function getSingle(apiEndpoint,id) {
         })
 }
 function addData(apiEndpoint, payload) {
-
+    debugger;
     return axios.post(config.baseUrl + apiEndpoint, payload, getParameterisedOptions(0))
         .then((response) => {
             return response;

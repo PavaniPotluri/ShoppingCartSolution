@@ -37,7 +37,20 @@ namespace ShoppingCart.WebAPI.Controllers
 
             return Ok(user);
         }
+        [AllowAnonymous]
+        [HttpPost]
+        [Route("Register")]
+        public IActionResult RegisterUser(User model)
+        {
+            int status = _userRepository.RegisterUser(model);
 
+            if (status > 0)
+                return Ok(model);
+            else if (status == -1)
+                return Conflict();
+            else
+                return BadRequest(new { message = "Registration failed." });
+        }
 
     }
 }
