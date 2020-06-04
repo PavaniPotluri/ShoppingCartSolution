@@ -18,5 +18,5 @@
 
 ### Shopping Cart website link
 
-     https://eshopcart.azurewebsites.net/
+https://eshopcart.azurewebsites.net/
 
