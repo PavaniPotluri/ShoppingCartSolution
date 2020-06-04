@@ -9,11 +9,13 @@ using Microsoft.EntityFrameworkCore;
 using ShoppingCart.WebAPI.Models;
 using ShoppingCart.WebAPI.Services;
 using ShoppingCart.WebAPI.Helpers;
+using Microsoft.AspNetCore.Cors;
 
 namespace ShoppingCart.WebAPI.Controllers
 {
     [Authorize]
     [Route("api/UserCart")]
+    [EnableCors("AllowOrigin")]
     [ApiController]
     public class UserCartController : ControllerBase
     {

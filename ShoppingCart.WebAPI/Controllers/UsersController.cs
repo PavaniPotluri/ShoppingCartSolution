@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +14,7 @@ namespace ShoppingCart.WebAPI.Controllers
 {
     [Authorize]
     [Route("api/Users")]
+    [EnableCors("AllowOrigin")]
     [ApiController]
     public class UsersController : ControllerBase
     {

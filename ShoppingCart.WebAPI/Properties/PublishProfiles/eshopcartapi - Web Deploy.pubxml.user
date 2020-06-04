@@ -10,7 +10,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <DestinationConnectionStrings Include="ShoppingCartDB">
-      <Value>Password=S%40mple1%24%3bPersist Security Info=True%3bUser ID=pavani%3bInitial Catalog=ShoppingCartDB%3bData Source=reactdemo.database.windows.net</Value>
+      <Value>Server=tcp:reactdemo.database.windows.net,1433%3bInitial Catalog=ShoppingCartDB%3bPersist Security Info=False%3bUser ID=pavani%3bPassword=S%40mple1%24%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
     </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="ShoppingCart.WebAPI.DataModels.ShoppingCartDBContext">
+      <Value>Server=tcp:reactdemo.database.windows.net,1433%3bInitial Catalog=ShoppingCartDB%3bPersist Security Info=False%3bUser ID=pavani%3bPassword=S%40mple1%24%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </EFMigrations>
   </ItemGroup>
 </Project>

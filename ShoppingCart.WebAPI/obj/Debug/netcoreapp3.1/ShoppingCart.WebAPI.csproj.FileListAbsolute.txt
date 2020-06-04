@@ -2,7 +2,6 @@ D:\ReactProject\ShoppingCartSolution\ShoppingCart.WebAPI\bin\Debug\netcoreapp3.1
 D:\ReactProject\ShoppingCartSolution\ShoppingCart.WebAPI\bin\Debug\netcoreapp3.1\appsettings.json
 D:\ReactProject\ShoppingCartSolution\ShoppingCart.WebAPI\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 D:\ReactProject\ShoppingCartSolution\ShoppingCart.WebAPI\bin\Debug\netcoreapp3.1\ShoppingCart.WebAPI.exe
-D:\ReactProject\ShoppingCartSolution\ShoppingCart.WebAPI\obj\Debug\netcoreapp3.1\ShoppingCart.WebAPI.csprojAssemblyReference.cache
 D:\ReactProject\ShoppingCartSolution\ShoppingCart.WebAPI\obj\Debug\netcoreapp3.1\staticwebassets\ShoppingCart.WebAPI.StaticWebAssets.Manifest.cache
 D:\ReactProject\ShoppingCartSolution\ShoppingCart.WebAPI\obj\Debug\netcoreapp3.1\staticwebassets\ShoppingCart.WebAPI.StaticWebAssets.xml
 D:\ReactProject\ShoppingCartSolution\ShoppingCart.WebAPI\obj\Debug\netcoreapp3.1\ShoppingCart.WebAPI.AssemblyInfoInputs.cache
@@ -135,3 +134,4 @@ D:\ReactProject\ShoppingCartSolution\ShoppingCart.WebAPI\obj\Debug\netcoreapp3.1
 D:\ReactProject\ShoppingCartSolution\ShoppingCart.WebAPI\obj\Debug\netcoreapp3.1\ShoppingCart.WebAPI.pdb
 D:\ReactProject\ShoppingCartSolution\ShoppingCart.WebAPI\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 D:\ReactProject\ShoppingCartSolution\ShoppingCart.WebAPI\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\ReactProject\ShoppingCartSolution\ShoppingCart.WebAPI\obj\Debug\netcoreapp3.1\ShoppingCart.WebAPI.csprojAssemblyReference.cache
